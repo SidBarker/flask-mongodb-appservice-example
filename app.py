@@ -4,7 +4,7 @@ from bson.objectid import ObjectId # For ObjectId to work
 from bson.errors import InvalidId # For catching InvalidId exception for ObjectId
 import os
 
-mongodb_host = os.environ.get('MONGO_CONNECTION_STRING', 'localhost')
+mongodb_host = os.environ.get('MongoConnectionString', 'localhost')
 client = MongoClient(mongodb_host)    #Configure the connection to the database
 db = client.camp2016    #Select the database
 todos = db.todo #Select the collection
